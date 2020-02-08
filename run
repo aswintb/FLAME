@@ -1,0 +1,98 @@
+
+
+#include<stdio.h>
+#include<string.h>
+
+
+int main()
+{
+
+char a1[25];
+char a2[25];
+int n1;
+int n2;
+int total;
+int commn;
+
+int fl;
+
+
+commn=0;
+
+int fno;
+printf("Enter name 1:");
+scanf("%s",a1);
+
+printf("Enter name 2:");
+scanf("%s",a2);
+
+n1=strlen(a1);
+n2=strlen(a2);
+total=n1+n2;
+
+
+
+for(int i=0;i<n1;i++)
+{
+for(int j=0;j<n2;j++)
+{
+if((j==i)&&(a1[i]==a2[j]))
+commn+=2;
+
+else if(a1[i]==a2[j])
+commn++;
+}
+}
+fl=total-commn;
+
+if(fl>5)
+fl=fl%5;
+
+switch (fl)
+{
+
+case 1:
+printf("\n%s",a1);
+printf(" and %s",a2);
+printf(" are friends.\n\n");
+break;
+
+case 2:
+printf("\n%s",a1);
+printf(" and %s",a2);
+printf(" are Lovers.\n\n");
+break;
+
+case 3:
+printf("\n%s",a1);
+printf(" and %s",a2);
+printf(" are affectionate.");
+break;
+
+case 4:
+printf("\n%s",a1);
+printf(" and %s",a2);
+printf(" are married.\n\n");
+break;
+
+case 5:
+printf("\n%s",a1);
+printf("and %s",a2);
+printf(" are enemies.\n\n");
+break;
+
+
+default:
+printf("\n :-( fatal error\n");
+}
+
+
+return 0;
+
+
+
+
+
+}
+
+
